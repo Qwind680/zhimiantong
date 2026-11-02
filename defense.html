@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>模拟答辩 · 职面通</title>
+<meta name="description" content="职面通模拟答辩：上传论文或课题材料，AI 答辩委员会围绕研究背景、方法、结论与局限逐层追问，答完出具答辩表现报告。" />
+<meta name="theme-color" content="#F1F5FC" />
+<link rel="icon" href="assets/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" media="print" onload="this.media='all';this.onload=null"
+      href="https://fonts.googleapis.cn/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.cn/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" /></noscript>
+<link rel="stylesheet" href="assets/styles.css" />
+<link rel="stylesheet" href="assets/interview.css" />
+</head>
+<body>
+
+<a class="zt-skip" href="#iv-main">跳到主要内容</a>
+<div class="zt-grid" aria-hidden="true"></div>
+<div class="zt-glow" aria-hidden="true"></div>
+
+<header class="zt-nav" id="zt-nav">
+  <div class="zt-nav__inner">
+    <a class="zt-brand" href="index.html" aria-label="职面通 首页">
+      <span class="zt-brand__mark" aria-hidden="true"><img src="assets/logo.png" width="32" height="32" alt="" decoding="async" /></span>
+      <span class="zt-brand__text"><b>职面通</b><i>Jobont</i></span>
+    </a>
+
+    <nav class="zt-nav__links" aria-label="主导航">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="resume.html">简历优化</a></li>
+        <li><a href="bank.html">题库</a></li>
+        <li><a href="interview.html">模拟面试</a></li>
+        <li><a class="is-current" aria-current="page" href="defense.html">模拟答辩</a></li>
+        <li><a href="group.html">联机群面</a></li>
+        <li><a href="growth.html">成长中心</a></li>
+        <li><a href="booking.html">预约线下</a></li>
+      </ul>
+    </nav>
+
+    <div class="zt-nav__act">
+      <a class="zt-btn zt-btn--ghost" href="index.html">返回首页</a>
+      <a class="zt-btn zt-btn--solid" href="#iv-setup">开始</a>
+    </div>
+
+    <button class="zt-burger" type="button" id="zt-burger" aria-expanded="false" aria-controls="zt-menu" aria-label="打开菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="zt-menu" id="zt-menu" hidden>
+    <ul class="zt-menu__list">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="resume.html">简历优化</a></li>
+      <li><a href="bank.html">题库</a></li>
+      <li><a href="interview.html">模拟面试</a></li>
+      <li><a class="is-current" aria-current="page" href="defense.html">模拟答辩</a></li>
+      <li><a href="group.html">联机群面</a></li>
+      <li><a href="growth.html">成长中心</a></li>
+      <li><a href="booking.html">预约线下</a></li>
+    </ul>
+    <div class="zt-menu__act">
+      <a class="zt-btn zt-btn--ghost" href="index.html">返回首页</a>
+      <a class="zt-btn zt-btn--solid" href="#iv-setup">开始</a>
+    </div>
+  </div>
+</header>
+
+<main class="iv" id="iv-main">
+
+  <!-- ═══════════ Step 1 · 准备 ═══════════ -->
+  <section class="iv-step is-on" data-step="1" id="iv-setup">
+    <div class="iv-setup">
+      <header class="iv-setup__head">
+        <p class="zt-kicker">模拟答辩</p>
+        <h1 class="iv-title">上传论文，<br />让 AI 答辩委员会考你一轮。</h1>
+      </header>
+
+      <div class="iv-card">
+        <div class="iv-field">
+          <label class="iv-label" for="iv-role">论文 / 课题标题<span class="iv-label__opt">选填</span></label>
+          <input class="iv-input" id="iv-role" type="text" autocomplete="off"
+                 placeholder="例如：基于深度学习的医学影像分割方法研究" />
+        </div>
+
+        <div class="iv-field">
+          <span class="iv-label">论文 / 材料</span>
+          <div class="iv-drop" id="iv-resume" role="button" tabindex="0"
+               aria-label="上传论文或材料，支持 PDF、Word、图片">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 16V4.5M8 8.5l4-4 4 4"/><path d="M4.5 15v3.5a1.5 1.5 0 0 0 1.5 1.5h12a1.5 1.5 0 0 0 1.5-1.5V15"/>
+            </svg>
+            <p class="iv-drop__t">把论文 / 材料拖进来，或点击选择</p>
+            <p class="iv-drop__s">PDF / Word / txt / 图片，单个文件</p>
+            <p class="iv-drop__ready" id="iv-resume-name"></p>
+          </div>
+          <input type="file" id="iv-file" accept=".pdf,.doc,.docx,.txt,.md,.jpg,.jpeg,.png,.gif,.webp,.bmp" hidden />
+          <div class="iv-parse" id="iv-parse" hidden>
+            <p class="iv-parse__stat" id="iv-parse-stat"></p>
+            <dl class="iv-parse__grid" id="iv-parse-grid"></dl>
+          </div>
+          <p class="iv-note" id="iv-resume-tip">
+            支持 PDF / Word / txt / 图片，最大 10MB。文字型 PDF 在本机解析，图片与扫描件走 AI 识别。
+          </p>
+        </div>
+
+        <div class="iv-field">
+          <span class="iv-label">题量</span>
+          <div class="iv-count">
+            <label class="iv-count__opt">
+              <input type="radio" name="iv-count" value="8" />
+              <span><b>8 题</b><i>约 20 分钟 · 快速过一遍核心问题</i></span>
+            </label>
+            <label class="iv-count__opt is-on">
+              <input type="radio" name="iv-count" value="12" checked />
+              <span><b>12 题</b><i>约 35 分钟 · 覆盖研究全流程</i></span>
+            </label>
+          </div>
+        </div>
+
+        <button class="zt-btn zt-btn--solid zt-btn--lg iv-start" id="iv-start" type="button">
+          开始答辩
+        </button>
+
+        <div class="iv-engine">
+          <span class="iv-engine__badge" id="engine-badge">检测中…</span>
+          <p class="iv-note" id="engine-note"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ Step 2 · 答辩 ═══════════ -->
+  <section class="iv-step iv-step--live" data-step="2" id="iv-live">
+    <div class="iv-live">
+      <div class="iv-live__bar">
+        <div class="iv-live__id">
+          <span class="iv-live__role" id="live-role">—</span>
+          <span class="iv-live__fam" id="live-family">答辩委员会</span>
+        </div>
+        <span class="iv-engine__badge iv-engine__badge--mini" id="engine-badge-live"></span>
+        <div class="iv-live__prog">
+          <span class="iv-live__count" id="live-count">第 1 题 / 共 12 题</span>
+          <div class="iv-live__track"><span id="live-bar"></span></div>
+          <span class="iv-live__plan" id="live-plan"></span>
+        </div>
+        <button class="iv-quit" type="button" id="iv-quit">结束答辩</button>
+      </div>
+
+      <div class="iv-thread" id="thread" role="log" aria-live="polite" aria-label="答辩对话"></div>
+
+      <form class="iv-composer" id="iv-composer" autocomplete="off">
+        <div class="iv-composer__row">
+          <label class="zt-skip" for="iv-input">你的回答</label>
+          <textarea id="iv-input" rows="1" placeholder="说清你的依据和过程：为什么这么做、怎么验证的、结论是什么。Enter 发送，Shift+Enter 换行。"></textarea>
+        </div>
+        <div class="iv-composer__act">
+          <button class="iv-skipbtn" type="button" id="iv-skip">跳过此题</button>
+          <button class="zt-btn zt-btn--solid" type="submit" id="iv-send" disabled>发送</button>
+        </div>
+      </form>
+
+      <div class="iv-voice" id="iv-voice" hidden>
+        <button class="iv-voice__btn" type="button" id="iv-voice-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0"/><path d="M12 18v3.5"/>
+          </svg>
+          <span id="iv-voice-btn-label">开始语音答辩</span>
+        </button>
+        <p class="iv-voice__hint" id="iv-voice-hint">开始后直接开口说话，AI 答辩委员会会用语音回应你。</p>
+        <div class="iv-voice__meta" id="iv-voice-meta" hidden>
+          <span>语速 <b id="iv-meta-rate">--</b>字/分</span>
+          <span>停顿 <b id="iv-meta-pause">--</b>次</span>
+          <span>填充词 <b id="iv-meta-filler">--</b></span>
+          <span>音量稳定 <b id="iv-meta-vol">--</b>%</span>
+        </div>
+        <div class="iv-voice__bar">
+          <button class="iv-voice__switch" type="button" id="iv-switch-text">切到文字回答</button>
+        </div>
+      </div>
+
+      <p class="iv-live__rules">
+        答辩追问规则：回答笼统 → 追问具体做了什么；只给结论不给依据 → 追问怎么验证的；
+        答非所问或不懂装懂 → 拉回论文本身；回答完整 → 进入下一题。<b>同一题最多追问 2 次。</b>
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════ Step 3 · 报告 ═══════════ -->
+  <section class="iv-step" data-step="3" id="iv-report">
+    <div class="iv-wrap rp">
+      <p class="rp-loading" id="rp-loading" hidden>
+        <span class="rp-loading__dot"></span>正在生成报告…
+      </p>
+      <header class="rp-head">
+        <p class="zt-kicker">答辩报告 <span class="rp-source" id="rp-source"></span></p>
+        <h1 class="rp-head__role" id="rp-role">—</h1>
+        <div class="rp-head__meta">
+          <span class="zt-chip" id="rp-family"></span>
+          <span class="rp-meta">已答 <b id="rp-answered">0 / 0</b></span>
+          <span class="rp-meta">跳过 <b id="rp-skipped">0</b> 题</span>
+          <span class="rp-meta rp-meta--file" id="rp-resume" hidden></span>
+          <span class="rp-meta" id="rp-time"></span>
+        </div>
+      </header>
+
+      <section class="rp-total" aria-labelledby="rp-total-t">
+        <h2 class="zt-skip" id="rp-total-t">综合评分</h2>
+        <div class="rp-total__num">
+          <b id="rp-total-num">0</b><i>/ 5</i>
+          <span class="rp-total__label" id="rp-total-label">胜任</span>
+        </div>
+        <div class="rp-bar rp-bar--lg"><span id="rp-total-bar"></span></div>
+        <ul class="rp-evidence" id="rp-evidence"></ul>
+      </section>
+
+      <section class="rp-block" aria-labelledby="rp-dims-t">
+        <h2 class="rp-block__t" id="rp-dims-t">各维度评分<span>BARS 五级锚定</span></h2>
+        <ul class="rp-dims" id="rp-dims"></ul>
+      </section>
+
+      <section class="rp-block" aria-labelledby="rp-review-t">
+        <h2 class="rp-block__t" id="rp-review-t">逐题回顾</h2>
+        <ul class="rp-review" id="rp-review"></ul>
+      </section>
+
+      <section class="rp-block" aria-labelledby="rp-advice-t">
+        <h2 class="rp-block__t" id="rp-advice-t">改进建议</h2>
+        <ol class="rp-advice-list" id="rp-advice"></ol>
+      </section>
+
+      <p class="rp-disclaimer">
+        这份报告衡量的是「有没有把研究讲清楚」，不能替代真实答辩，也不能反映论文本身质量。
+        正式答辩前请找导师或同学真实演练一轮。
+      </p>
+
+      <div class="rp-cta">
+        <a class="zt-btn zt-btn--solid zt-btn--lg" href="index.html">返回首页</a>
+        <button class="zt-btn zt-btn--line zt-btn--lg" type="button" id="rp-again">再练一轮</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 回答方式选择 ═══════════ -->
+  <div class="iv-mode" id="iv-mode" hidden>
+    <div class="iv-mode__panel" role="dialog" aria-modal="true" aria-labelledby="iv-mode-t">
+      <p class="zt-kicker">选择回答方式</p>
+      <h2 class="iv-mode__t" id="iv-mode-t">这次答辩，你想怎么答？</h2>
+      <div class="iv-mode__grid">
+        <button class="iv-mode__opt" type="button" id="iv-mode-text">
+          <svg class="iv-mode__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/>
+          </svg>
+          <b>文字回答</b>
+          <i>键盘输入，Enter 发送</i>
+        </button>
+        <button class="iv-mode__opt" type="button" id="iv-mode-voice">
+          <svg class="iv-mode__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0"/><path d="M12 18v3.5"/>
+          </svg>
+          <b>语音回答</b>
+          <i>开口说，AI 自动转成文字</i>
+        </button>
+      </div>
+      <button class="iv-mode__cancel" type="button" id="iv-mode-cancel">返回修改</button>
+    </div>
+  </div>
+
+  <!-- ═══════════ 语音表达报告 ═══════════ -->
+  <div class="iv-mode" id="iv-voice-report" hidden>
+    <div class="iv-mode__panel iv-pl" role="dialog" aria-modal="true" aria-labelledby="iv-pl-t">
+      <p class="zt-kicker">表达与副语言报告</p>
+      <h2 class="iv-mode__t" id="iv-pl-t">这轮语音表达的评估</h2>
+      <div class="iv-pl__metrics" id="iv-pl-metrics"></div>
+      <p class="iv-pl__comment" id="iv-pl-comment">AI 点评生成中…</p>
+      <div class="iv-pl__acts">
+        <button class="zt-btn zt-btn--solid" type="button" id="iv-pl-again">再来一轮</button>
+        <button class="zt-btn zt-btn--line" type="button" id="iv-pl-close">关闭</button>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<div class="zt-toast" id="zt-toast" role="status" aria-live="polite"></div>
+
+<script src="assets/main.js"></script>
+<script src="assets/llm.js"></script>
+<script src="assets/resume.js"></script>
+<script src="assets/paralinguistic.js"></script>
+<script src="assets/defense.js"></script>
+</body>
+</html>

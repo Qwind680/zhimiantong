@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>预约线下 · 职面通</title>
+<meta name="description" content="职面通「预约线下」：真实模拟面试间，线上选地点、选面试间、选时段，提交预约后于面试间扫码签到即可开始。40 分钟一场，含录像回放。" />
+<meta name="theme-color" content="#F1F5FC" />
+<link rel="icon" href="assets/favicon.png" />
+<!-- 字体：优先国内可达的 Google 中国镜像，失败再回落官方源；
+     全部异步加载，绝不阻塞首屏渲染（国内访问 Google Fonts 会被墙） -->
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" media="print" onload="this.media='all';this.onload=null"
+      href="https://fonts.googleapis.cn/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" />
+<link rel="stylesheet" media="print" onload="this.media='all';this.onload=null"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.cn/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" /></noscript>
+<link rel="stylesheet" href="assets/styles.css" />
+<link rel="stylesheet" href="assets/booking.css" />
+</head>
+<body>
+
+<a class="zt-skip" href="#bk-main">跳到主要内容</a>
+<div class="zt-grid" aria-hidden="true"></div>
+<div class="zt-glow" aria-hidden="true"></div>
+
+<header class="zt-nav" id="zt-nav">
+  <div class="zt-nav__inner">
+    <a class="zt-brand" href="index.html" aria-label="职面通 首页">
+      <span class="zt-brand__mark" aria-hidden="true"><img src="assets/logo.png" width="32" height="32" alt="" decoding="async" /></span>
+      <span class="zt-brand__text"><b>职面通</b><i>Jobont</i></span>
+    </a>
+
+    <nav class="zt-nav__links" aria-label="主导航">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="resume.html">简历优化</a></li>
+        <li><a href="bank.html">题库</a></li>
+        <li><a href="interview.html">模拟面试</a></li>
+        <li><a href="defense.html">模拟答辩</a></li>
+        <li><a href="group.html">联机群面</a></li>
+        <li><a href="growth.html">成长中心</a></li>
+        <li><a class="is-current" aria-current="page" href="booking.html">预约线下</a></li>
+      </ul>
+    </nav>
+
+    <div class="zt-nav__act">
+      <a class="zt-btn zt-btn--ghost" href="index.html">返回首页</a>
+      <a class="zt-btn zt-btn--solid" href="bank.html">去刷题</a>
+    </div>
+
+    <button class="zt-burger" type="button" id="zt-burger" aria-expanded="false" aria-controls="zt-menu" aria-label="打开菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="zt-menu" id="zt-menu" hidden>
+    <ul class="zt-menu__list">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="resume.html">简历优化</a></li>
+        <li><a href="bank.html">题库</a></li>
+        <li><a href="interview.html">模拟面试</a></li>
+        <li><a href="defense.html">模拟答辩</a></li>
+        <li><a href="group.html">联机群面</a></li>
+        <li><a href="growth.html">成长中心</a></li>
+        <li><a class="is-current" aria-current="page" href="booking.html">预约线下</a></li>
+    </ul>
+    <div class="zt-menu__act">
+      <a class="zt-btn zt-btn--ghost" href="index.html">返回首页</a>
+      <a class="zt-btn zt-btn--solid" href="bank.html">去刷题</a>
+    </div>
+  </div>
+</header>
+
+<main class="bk" id="bk-main">
+  <div class="zt-wrap">
+
+    <section class="bk-hero">
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <p class="bk-eyebrow">线下模拟面试间</p>
+        <button type="button" class="bk-mine" id="bk-mine" style="margin-left:auto" aria-expanded="false" aria-controls="bk-drawer">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          我的预约<span class="bk-mine__n" id="bk-mine-n" hidden>0</span>
+        </button>
+      </div>
+
+      <h1 class="bk-hero__h1">坐进<em>真的面试间</em>，<br />对着一块屏幕把话说出口。</h1>
+
+      <div class="bk-hero__facts">
+        <p class="bk-fact"><b>2</b><span>个地点</span></p>
+        <p class="bk-fact"><b>4</b><span>间面试间</span></p>
+        <p class="bk-fact"><b>40</b><span>分钟一场</span></p>
+        <p class="bk-fact"><b>10</b><span>分钟内出回放</span></p>
+      </div>
+    </section>
+
+    <div class="bk-layout">
+      <div class="bk-main-col">
+
+        <!-- 1 地点 -->
+        <section class="bk-step">
+          <h2 class="bk-step__h"><i>1</i>选地点</h2>
+          <p class="bk-step__tip">两点都在<b>地铁</b>旁边</p>
+          <div class="bk-places" id="bk-places"></div>
+        </section>
+
+        <!-- 2 日期 -->
+        <section class="bk-step">
+          <h2 class="bk-step__h"><i>2</i>选日期</h2>
+          <p class="bk-step__tip">未来<b>7 天</b>可约</p>
+          <div class="bk-days" id="bk-days" role="group" aria-label="选择日期"></div>
+        </section>
+
+        <!-- 3 选面试间 -->
+        <section class="bk-step">
+          <h2 class="bk-step__h"><i>3</i>选面试间</h2>
+          <p class="bk-step__tip">先选间，<b>再看它的时段</b></p>
+          <div class="bk-rooms" id="bk-rooms"></div>
+        </section>
+
+        <!-- 4 选时段 -->
+        <section class="bk-step" id="bk-step-slot">
+          <h2 class="bk-step__h"><i>4</i>选时段</h2>
+          <p class="bk-step__tip"><b>09:00 - 21:00</b> 每个整点一场</p>
+          <p class="bk-slot-empty" id="bk-slot-empty" hidden>先在上面选一间面试间，这里会列出它当天的时段。</p>
+          <div class="bk-board" id="bk-board"></div>
+          <div class="bk-legend">
+            <span class="lg-free"><i></i>可约</span>
+            <span class="lg-mine"><i></i>你已约</span>
+            <span class="lg-closed"><i></i>该时段不开放</span>
+          </div>
+        </section>
+
+        <!-- 5 信息 -->
+        <section class="bk-step">
+          <h2 class="bk-step__h"><i>5</i>填信息</h2>
+          <p class="bk-step__tip">到面试间内<b>扫码签到</b>即可</p>
+          <p class="bk-pick" id="bk-pick" hidden></p>
+
+          <div class="bk-done" id="bk-done" hidden></div>
+
+          <form class="bk-form" id="bk-form" novalidate>
+            <div class="bk-form__grid">
+              <div class="bk-field">
+                <label class="bk-label" for="bk-f-name">姓名<i>*</i></label>
+                <input class="bk-input" id="bk-f-name" type="text" placeholder="怎么称呼你" autocomplete="name" />
+                <p class="bk-err" id="bk-f-name-err"></p>
+              </div>
+              <div class="bk-field">
+                <label class="bk-label" for="bk-f-phone">手机号<i>*</i></label>
+                <input class="bk-input" id="bk-f-phone" type="tel" inputmode="numeric" placeholder="11 位手机号" autocomplete="tel" />
+                <p class="bk-err" id="bk-f-phone-err"></p>
+              </div>
+              <div class="bk-field">
+                <label class="bk-label" for="bk-f-email">邮箱<em>选填</em></label>
+                <input class="bk-input" id="bk-f-email" type="email" placeholder="录像回放发到这里" autocomplete="email" />
+                <p class="bk-err" id="bk-f-email-err"></p>
+              </div>
+              <div class="bk-field">
+                <label class="bk-label" for="bk-f-role">目标岗位<i>*</i></label>
+                <input class="bk-input" id="bk-f-role" type="text" placeholder="例如：产品经理 / 前端开发" />
+                <p class="bk-err" id="bk-f-role-err"></p>
+              </div>
+              <div class="bk-field bk-field--full">
+                <label class="bk-label" for="bk-f-note">想练什么<em>选填</em></label>
+                <textarea class="bk-textarea" id="bk-f-note" placeholder="例如：项目经历讲不清楚；想练一轮压力面；简历刚改过，想试试新版本的效果。"></textarea>
+                <p class="bk-hint">写下来，面试官会照着这个准备，比临场想强。</p>
+              </div>
+            </div>
+
+            <button class="bk-submit" type="submit">
+              确认预约<span class="bk-submit__price" id="bk-submit-price">到店付</span>
+            </button>
+
+            <p class="bk-consent">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+              <span>提交即表示同意<strong>于预约时段开始前 10 分钟到场</strong>，并在面试间内扫码签到；迟到超过 10 分钟的视为放弃本次预约，改期与取消均不收费。</span>
+            </p>
+          </form>
+        </section>
+
+        <!-- 到场须知 -->
+        <section class="bk-notes">
+          <p class="bk-notes__h">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v5M12 16h.01"/><circle cx="12" cy="12" r="9"/></svg>
+            预约须知
+          </p>
+          <ul>
+            <li>请于预约时段开始前 10 分钟到场，在面试间内使用预约码扫码签到。签到后即视为到场，无需另行登记。</li>
+            <li>每个时段仅接待一位预约者，面试间为独立使用，不与其他预约共用。</li>
+            <li>面试全程录音录像，录像回放将于面试结束后 10 分钟内生成，并发送至预约时填写的电子邮箱。</li>
+            <li>迟到超过 10 分钟的，视为放弃本次预约；改期与取消可随时办理，不收取任何费用。</li>
+          </ul>
+        </section>
+
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+<!-- 移动端底栏 -->
+<div class="bk-bar" id="bk-bar">
+  <div class="bk-bar__i" id="bk-bar-i"></div>
+  <button type="button" class="bk-bar__b" id="bk-bar-b">去填信息</button>
+</div>
+
+<!-- 我的预约 -->
+<div class="bk-drawer__mask" id="bk-drawer-mask"></div>
+<aside class="bk-drawer" id="bk-drawer" role="dialog" aria-modal="true" aria-labelledby="bk-drawer-title">
+  <div class="bk-drawer__h">
+    <b id="bk-drawer-title">我的预约</b>
+    <span id="bk-drawer-n"></span>
+    <button type="button" class="bk-drawer__close" id="bk-drawer-close" aria-label="关闭" aria-expanded="false">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <div class="bk-drawer__body" id="bk-drawer-body"></div>
+</aside>
+
+<footer class="zt-foot">
+  <div class="zt-wrap">
+    <div class="zt-foot__top">
+      <div class="zt-foot__brand">
+        <span class="zt-foot__logo" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <rect x=".75" y=".75" width="30.5" height="30.5" rx="9" fill="url(#zt-mark-f)" />
+            <path d="M9 11.5h14M9 16h9M9 20.5h5" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+            <circle cx="23.5" cy="20.5" r="2.6" fill="#fff" />
+            <defs><linearGradient id="zt-mark-f" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#3E6BFF" /><stop offset="1" stop-color="#0FB5CE" /></linearGradient></defs>
+          </svg>
+        </span>
+        <p class="zt-foot__slogan">直面挑战，拿下 Offer。</p>
+        <p class="zt-foot__desc">面向大学生的 AI 求职面试练习平台。</p>
+      </div>
+
+      <nav class="zt-foot__cols" aria-label="功能导航">
+        <div class="zt-foot__col">
+          <p class="zt-foot__head">功能</p>
+          <ul>
+            <li><a href="resume.html">简历优化</a></li>
+            <li><a href="bank.html">题库</a></li>
+            <li><a href="interview.html">模拟面试</a></li>
+          </ul>
+        </div>
+        <div class="zt-foot__col">
+          <p class="zt-foot__head">练习</p>
+          <ul>
+            <li><a href="group.html">联机群面</a></li>
+            <li><a href="growth.html">成长中心</a></li>
+            <li><a href="booking.html">预约线下</a></li>
+          </ul>
+        </div>
+        <div class="zt-foot__col">
+          <p class="zt-foot__head">关于</p>
+          <ul>
+            <li><button type="button" data-coming="产品说明">产品说明</button></li>
+            <li><button type="button" data-coming="联系我们">联系我们</button></li>
+            <li><button type="button" data-coming="用户协议">用户协议</button></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="zt-foot__bottom">
+      <p class="zt-foot__copy">© 2026 职面通 Jobont</p>
+      <p class="zt-foot__status"><span class="zt-dot" aria-hidden="true"></span>以上模块正在陆续开放</p>
+    </div>
+  </div>
+</footer>
+
+<div class="zt-toast" id="zt-toast" role="status" aria-live="polite"></div>
+
+<script src="assets/main.js"></script>
+<script src="assets/booking.js"></script>
+</body>
+</html>

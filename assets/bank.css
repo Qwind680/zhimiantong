@@ -1,0 +1,328 @@
+/* ============================================================
+   职面通 · 题库页
+   左侧分类导航 + 右侧题目流
+   ============================================================ */
+
+.bk {
+  display: grid;
+  grid-template-columns: 236px minmax(0, 1fr);
+  align-items: start;
+  min-height: calc(100svh - var(--nav-h));
+}
+
+/* ---------- 左侧导航 ---------- */
+.bk-side {
+  position: sticky; top: var(--nav-h);
+  align-self: start;
+  height: calc(100svh - var(--nav-h));
+  overflow-y: auto;
+  border-right: 1px solid var(--line);
+  background: rgba(247, 250, 255, .72);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.bk-side__inner { padding: 26px 16px 40px; }
+.bk-side__cap {
+  font-family: var(--f-mono); font-size: 11px; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--ink-4);
+  padding: 0 10px 10px;
+}
+.bk-side__cap--fav { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--line); }
+
+.bk-nav__item { display: block; }
+.bk-nav__link {
+  display: flex; align-items: center; gap: 8px;
+  width: 100%; padding: 9px 10px;
+  border-radius: var(--r-sm);
+  font-size: 14.5px; color: var(--ink-2); text-align: left;
+  transition: background-color .18s ease, color .18s ease;
+}
+.bk-nav__link:hover { background: var(--surface); color: var(--ink); }
+.bk-nav__link.is-on {
+  background: var(--blue-wash); color: var(--blue); font-weight: 500;
+  box-shadow: inset 2px 0 0 var(--blue);
+}
+.bk-nav__n {
+  margin-left: auto;
+  font-family: var(--f-mono); font-size: 11px; color: var(--ink-4);
+}
+.bk-nav__link.is-on .bk-nav__n { color: var(--blue); opacity: .7; }
+.bk-nav__link.is-empty { color: var(--ink-4); }
+
+/* 收藏项 */
+.bk-fav { margin-top: 4px; }
+.bk-fav__item {
+  display: flex; align-items: flex-start; gap: 8px;
+  width: 100%; padding: 8px 10px;
+  border-radius: var(--r-sm); text-align: left;
+  transition: background-color .18s ease;
+}
+.bk-fav__item:hover { background: var(--surface); }
+.bk-fav__item.is-on { background: var(--blue-wash); }
+.bk-fav__t {
+  font-size: 12.5px; line-height: 1.5; color: var(--ink-2);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.bk-fav__c { font-family: var(--f-mono); font-size: 10px; color: var(--ink-4); flex: none; margin-top: 2px; }
+.bk-fav__empty {
+  padding: 10px; font-size: 13px; line-height: 1.6; color: var(--ink-4);
+}
+
+/* ---------- 右侧内容 ---------- */
+.bk-main { min-width: 0; }
+.bk-main__inner {
+  width: min(760px, calc(100% - 48px));
+  margin-inline: auto;
+  padding: clamp(32px, 5vw, 52px) 0 clamp(60px, 8vw, 90px);
+}
+.bk-head__title {
+  margin: 10px 0 0;
+  font-size: clamp(24px, 3vw, 32px); font-weight: 900; letter-spacing: -.03em;
+}
+.bk-head__sub { margin-top: 10px; font-size: 15px; color: var(--ink-2); }
+
+.bk-tools {
+  display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+  margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--line);
+}
+.bk-search {
+  position: relative; display: flex; align-items: center; gap: 8px;
+  flex: 1 1 240px; height: 40px; padding: 0 12px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-pill);
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.bk-search:focus-within { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(30,75,242,.1); }
+.bk-search svg { width: 16px; height: 16px; color: var(--ink-4); flex: none; }
+.bk-search input {
+  flex: 1; min-width: 0; border: 0; background: none; padding: 0;
+  font-family: inherit; font-size: 14px; color: var(--ink);
+}
+.bk-search input:focus { outline: none; }
+.bk-search input::-webkit-search-cancel-button { display: none; }
+.bk-search__clear {
+  flex: none; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--line); color: var(--ink-2); font-size: 14px; line-height: 1;
+  display: grid; place-items: center;
+}
+.bk-search__clear:hover { background: var(--line-2); }
+
+.bk-filters { display: flex; flex-wrap: wrap; gap: 6px; }
+.bk-chip {
+  height: 32px; padding: 0 13px;
+  border: 1px solid var(--line); border-radius: var(--r-pill);
+  background: var(--surface); color: var(--ink-2); font-size: 13px;
+  transition: color .18s ease, border-color .18s ease, background-color .18s ease;
+}
+.bk-chip:hover { border-color: var(--blue); color: var(--blue); }
+.bk-chip.is-on { background: var(--blue); border-color: var(--blue); color: #fff; }
+
+.bk-count {
+  margin: 20px 0 14px;
+  font-family: var(--f-mono); font-size: 12px; color: var(--ink-3);
+}
+.bk-count b { color: var(--ink); font-weight: 500; }
+
+/* ---------- 题目 ---------- */
+.bk-list { display: grid; gap: 10px; }
+
+.bk-q {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  transition: border-color .22s ease, box-shadow .22s ease;
+}
+.bk-q.is-open { border-color: var(--line-2); box-shadow: var(--shadow-md); }
+.bk-q.is-fav { background: linear-gradient(to right, #FBFCFF, #F6F9FF); }
+
+.bk-q__head {
+  display: flex; align-items: flex-start; gap: 8px;
+  padding: 16px 18px;
+}
+/* 题干本身是按钮，收藏键是它旁边的独立按钮 —— 不嵌套交互元素 */
+.bk-q__toggle {
+  display: flex; align-items: flex-start; gap: 12px;
+  flex: 1; min-width: 0; padding: 0; text-align: left;
+}
+.bk-q__no {
+  flex: none; width: 26px;
+  font-family: var(--f-mono); font-size: 11.5px; color: var(--ink-4);
+  padding-top: 3px;
+}
+.bk-q__body { flex: 1; min-width: 0; }
+.bk-q__meta {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+  margin-bottom: 7px;
+}
+.bk-q__type {
+  display: inline-flex; align-items: center; height: 19px; padding: 0 8px;
+  border-radius: var(--r-pill);
+  background: var(--blue-soft); color: var(--blue);
+  font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .04em;
+}
+.bk-q__type[data-t="multi"]  { background: #E6F0FE; color: #1D5FD0; }
+.bk-q__type[data-t="judge"]  { background: var(--cyan-soft); color: #0A8AA0; }
+.bk-q__type[data-t="short"]  { background: #F3ECFD; color: #6A3FC4; }
+.bk-q__cat {
+  font-family: var(--f-mono); font-size: 10.5px; color: var(--ink-4);
+}
+.bk-q__stem { font-size: 15.5px; line-height: 1.68; color: var(--ink); }
+.bk-q__stem mark { background: #FFF0B8; color: inherit; border-radius: 2px; padding: 0 1px; }
+
+.bk-q__ops { display: flex; align-items: center; gap: 4px; flex: none; padding-top: 0; }
+.bk-favbtn {
+  display: grid; place-items: center; flex: none;
+  width: 32px; height: 32px; border-radius: 9px;
+  color: var(--ink-4);
+  transition: color .18s ease, background-color .18s ease, transform .18s ease;
+}
+.bk-favbtn:hover { color: var(--blue); background: var(--blue-wash); }
+.bk-favbtn svg { width: 18px; height: 18px; }
+.bk-favbtn.is-on { color: #E8A33D; }
+.bk-favbtn.is-on:hover { background: #FEF6E7; }
+.bk-favbtn.is-on svg { fill: currentColor; }
+.bk-favbtn.is-on.pop { animation: bk-pop .32s cubic-bezier(.3,1.5,.5,1); }
+@keyframes bk-pop { 0% { transform: scale(1); } 45% { transform: scale(1.28); } 100% { transform: scale(1); } }
+
+.bk-q__caret {
+  display: grid; place-items: center;
+  width: 28px; height: 32px; color: var(--ink-4);
+}
+.bk-q__caret svg { width: 15px; height: 15px; transition: transform .25s cubic-bezier(.22,.7,.3,1); }
+.bk-q.is-open .bk-q__caret svg { transform: rotate(180deg); }
+.bk-q.is-open .bk-q__caret { color: var(--blue); }
+
+/* 展开区 */
+/* 题库正文里可能出现长英文串（What/Why/Who/When/Where/How、load balancing 等），
+   这些串在 min-content 里不可断，会把 flex/grid 列表整体撑宽。
+   anywhere 会参与 min-content 计算，break-word 不会 —— 这里必须用 anywhere。 */
+.bk-q__stem,
+.bk-opt,
+.bk-ans__v,
+.bk-ans__e,
+.bk-fav__t { overflow-wrap: anywhere; }
+
+.bk-q__panel { padding: 0 18px 18px 56px; }
+
+.bk-opts { display: grid; gap: 6px; margin-bottom: 14px; }
+.bk-opt {
+  display: flex; gap: 9px; align-items: flex-start;
+  padding: 10px 13px; border-radius: var(--r-sm);
+  background: var(--surface-2); border: 1px solid transparent;
+  font-size: 14.5px; line-height: 1.65; color: var(--ink-2);
+  transition: background-color .18s ease, border-color .18s ease;
+}
+.bk-opt__k {
+  flex: none; width: 20px; height: 20px; border-radius: 6px;
+  display: grid; place-items: center;
+  background: var(--surface); border: 1px solid var(--line);
+  font-family: var(--f-mono); font-size: 11px; color: var(--ink-3);
+}
+.bk-opt.is-right { background: #EAF7F0; border-color: #BFE4CE; color: var(--ink); }
+.bk-opt.is-right .bk-opt__k { background: #1F9D57; border-color: #1F9D57; color: #fff; }
+
+.bk-ans {
+  padding: 14px 16px; border-radius: var(--r);
+  background: var(--blue-wash); border: 1px solid #DCE5FD;
+}
+.bk-ans__l {
+  font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .12em;
+  color: var(--blue); margin-bottom: 7px;
+}
+.bk-ans__v { font-size: 14.5px; line-height: 1.75; color: var(--ink); white-space: pre-wrap; }
+.bk-ans__v--tf { font-size: 17px; font-weight: 700; }
+.bk-ans__v--tf.is-no { color: #C0392B; }
+.bk-ans__e {
+  margin-top: 12px; padding-top: 12px; border-top: 1px dashed #CBD9FB;
+  font-size: 13.5px; line-height: 1.75; color: var(--ink-2);
+}
+.bk-ans__e b {
+  display: block; font-family: var(--f-mono); font-size: 10.5px; font-weight: 400;
+  letter-spacing: .12em; color: var(--blue); margin-bottom: 5px;
+}
+
+.bk-q__foot {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line);
+}
+.bk-q__src { font-family: var(--f-mono); font-size: 10.5px; color: var(--ink-4); }
+.bk-q__fold {
+  font-size: 12.5px; color: var(--ink-4);
+  transition: color .18s ease;
+}
+.bk-q__fold:hover { color: var(--blue); }
+
+/* ---------- 空态 / 页脚提示 ---------- */
+.bk-empty {
+  padding: 56px 20px; text-align: center;
+  border: 1px dashed var(--line-2); border-radius: var(--r-md);
+}
+.bk-empty__t { display: block; font-size: 16px; font-weight: 500; color: var(--ink); }
+.bk-empty__s { display: block; margin-top: 8px; font-size: 14px; color: var(--ink-3); }
+
+.bk-note {
+  margin-top: 32px; padding: 14px 18px;
+  background: var(--surface-2); border: 1px solid var(--line);
+  border-left: 3px solid var(--ink-4);
+  border-radius: var(--r);
+  font-size: 13px; line-height: 1.7; color: var(--ink-3);
+}
+
+/* ---------- 移动端：侧栏抽屉 ---------- */
+.bk-sidebtn {
+  position: fixed; z-index: 60;
+  left: 16px; bottom: 20px;
+  display: none; align-items: center; gap: 7px;
+  height: 42px; padding: 0 16px;
+  background: var(--ink); color: #fff;
+  border-radius: var(--r-pill);
+  font-size: 14px;
+  box-shadow: 0 12px 28px -10px rgba(10,21,51,.55);
+}
+.bk-sidebtn svg { width: 16px; height: 16px; }
+.bk-scrim {
+  position: fixed; inset: 0; z-index: 110;
+  background: rgba(10,21,51,.34);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+
+/* ============================================================
+   响应式
+   ============================================================ */
+@media (max-width: 1000px) {
+  .bk { grid-template-columns: 1fr; }
+  .bk-sidebtn { display: flex; }
+  .bk-side {
+    position: fixed; top: 0; left: 0; z-index: 120;   /* 高于导航栏 */
+    width: min(300px, 84vw); height: 100svh;
+    background: var(--surface);
+    transform: translateX(-100%);
+    transition: transform .28s cubic-bezier(.22,.7,.3,1);
+  }
+  /* 抽屉盖住导航栏，内容要让开导航栏的高度 */
+  .bk-side__inner { padding-top: calc(var(--nav-h) + 18px); }
+  .bk-side__close {
+    position: absolute; top: 14px; right: 14px;
+    display: grid; place-items: center;
+    width: 34px; height: 34px; border-radius: 50%;
+    background: var(--surface-2); color: var(--ink-2); font-size: 19px; line-height: 1;
+  }
+  .bk-side__close:hover { background: var(--line); color: var(--ink); }
+  .bk-side.is-open { transform: none; box-shadow: 24px 0 60px -30px rgba(10,21,51,.5); }
+  .bk-main__inner { width: min(760px, calc(100% - 36px)); }
+}
+
+@media (max-width: 640px) {
+  .bk-q__head { padding: 14px 14px; gap: 9px; }
+  .bk-q__no { width: 22px; }
+  .bk-q__stem { font-size: 15px; }
+  .bk-q__panel { padding: 0 14px 16px 45px; }
+  .bk-q__caret { display: none; }
+  .bk-tools { gap: 10px; }
+  .bk-search { flex-basis: 100%; }
+  .bk-sidebtn { bottom: 16px; left: 16px; }
+}
+
+@media (min-width: 1001px) { .bk-side__close { display: none; } }

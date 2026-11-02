@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>职面通 · 直面挑战，拿下 Offer</title>
+<meta name="description" content="职面通是面向大学生的 AI 求职面试练习平台：简历优化、岗位题库、模拟面试、联机群面、成长中心与线下面试间预约，把求职要练的每一件事都做成了能反复练的工具。" />
+<meta name="theme-color" content="#F1F5FC" />
+<link rel="icon" href="assets/favicon.png" />
+
+<!-- 字体：优先国内可达的 Google 中国镜像，失败再回落官方源；
+     全部异步加载，绝不阻塞首屏渲染（国内访问 Google Fonts 会被墙） -->
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" media="print" onload="this.media='all';this.onload=null"
+      href="https://fonts.googleapis.cn/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" />
+<link rel="stylesheet" media="print" onload="this.media='all';this.onload=null"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.cn/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" /></noscript>
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<a class="zt-skip" href="#main">跳到主要内容</a>
+<div class="zt-grid" aria-hidden="true"></div>
+<div class="zt-glow" aria-hidden="true"></div>
+
+<!-- ══════════════ 导航栏 ══════════════ -->
+<header class="zt-nav" id="zt-nav">
+  <div class="zt-nav__inner">
+
+    <a class="zt-brand" href="#top" aria-label="职面通 首页">
+      <span class="zt-brand__mark" aria-hidden="true"><img src="assets/logo.png" width="32" height="32" alt="" decoding="async" /></span>
+      <span class="zt-brand__text">
+        <b>职面通</b>
+        <i>Jobont</i>
+      </span>
+    </a>
+
+    <nav class="zt-nav__links" aria-label="主导航">
+      <ul>
+        <li><a class="is-current" aria-current="page" href="index.html">首页</a></li>
+        <li><a href="resume.html">简历优化</a></li>
+        <li><a href="bank.html">题库</a></li>
+        <li><a href="interview.html">模拟面试</a></li>
+        <li><a href="defense.html">模拟答辩</a></li>
+        <li><a href="group.html">联机群面</a></li>
+        <li><a href="growth.html">成长中心</a></li>
+        <li><a href="booking.html">预约线下</a></li>
+      </ul>
+    </nav>
+
+    <div class="zt-nav__act">
+      <button type="button" class="zt-btn zt-btn--ghost" data-coming="登录">登录</button>
+      <button type="button" class="zt-btn zt-btn--solid" data-coming="开始准备">开始准备</button>
+    </div>
+
+    <button class="zt-burger" type="button" id="zt-burger" aria-expanded="false" aria-controls="zt-menu" aria-label="打开菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="zt-menu" id="zt-menu" hidden>
+    <ul class="zt-menu__list">
+        <li><a class="is-current" aria-current="page" href="index.html">首页</a></li>
+        <li><a href="resume.html">简历优化</a></li>
+        <li><a href="bank.html">题库</a></li>
+        <li><a href="interview.html">模拟面试</a></li>
+        <li><a href="defense.html">模拟答辩</a></li>
+        <li><a href="group.html">联机群面</a></li>
+        <li><a href="growth.html">成长中心</a></li>
+        <li><a href="booking.html">预约线下</a></li>
+      </ul>
+    <div class="zt-menu__act">
+      <button type="button" class="zt-btn zt-btn--ghost" data-coming="登录">登录</button>
+      <button type="button" class="zt-btn zt-btn--solid" data-coming="开始准备">开始准备</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ══════════════ Hero ══════════════ -->
+  <section class="zt-hero" id="top">
+    <div class="zt-hero__inner">
+
+      <div class="zt-hero__copy">
+        <p class="zt-eyebrow zt-reveal" data-i="0">
+          <span class="zt-dot" aria-hidden="true"></span>AI 面试准备平台 · 面向在校大学生
+        </p>
+
+        <h1 class="zt-hero__title zt-reveal" data-i="1">
+          直面挑战，<br />拿下 <em>offer</em>
+        </h1>
+
+        <p class="zt-hero__lead zt-reveal" data-i="2">
+          简历、题库、模拟面试、群面、复盘——职面通把求职要练的每一件事
+          都做成了一个能反复练的工具。AI 当你的面试官，追问到你答得上为止。
+        </p>
+
+        <div class="zt-hero__act zt-reveal" data-i="3">
+          <a class="zt-btn zt-btn--solid zt-btn--lg" href="resume.html">
+            开始准备我的简历
+          </a>
+          <a class="zt-btn zt-btn--line zt-btn--lg" href="#features">看看有什么功能</a>
+        </div>
+
+        <p class="zt-hero__note zt-reveal" data-i="4">
+          简历解析<span aria-hidden="true">·</span>岗位题库<span aria-hidden="true">·</span>实时追问<span aria-hidden="true">·</span>回答评分
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════ 功能总览 ══════════════ -->
+  <section class="zt-caps" id="features" aria-labelledby="caps-t">
+    <div class="zt-wrap">
+      <header class="zt-sec-head zt-sec-head--center zt-reveal">
+        <p class="zt-kicker">功能</p>
+        <h2 class="zt-sec-title" id="caps-t">六件事，从简历一路走到 offer。</h2>
+        <p class="zt-sec-lead">每一件都能单独练，也能接着上一件继续。</p>
+      </header>
+
+      <ul class="zt-caps__grid">
+
+        <li class="zt-cap zt-reveal" data-i="0">
+          <span class="zt-cap__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13.5 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8.5L13.5 3Z" />
+              <path d="M13.5 3v3.5a2 2 0 0 0 2 2h3" />
+              <path d="M9 13.5h6M9 17h4" />
+            </svg>
+          </span>
+          <h3>简历优化</h3>
+          <p class="zt-cap__desc">上传简历，AI智能润色和专业化修改，让你的简历脱颖而出</p>
+          <a class="zt-cap__go zt-cap__go--live" href="resume.html">
+            <span>提升面试邀请率 50%+</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m9 5 7 7-7 7" />
+            </svg>
+          </a>
+        </li>
+
+        <li class="zt-cap zt-reveal" data-i="1">
+          <span class="zt-cap__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 6.6C10.5 5.1 8.5 4.6 5 5.1v13c3.5-.5 5.5 0 7 1.5 1.5-1.5 3.5-2 7-1.5v-13c-3.5-.5-5.5 0-7 1.5Z" />
+              <path d="M12 6.6v13" />
+            </svg>
+          </span>
+          <h3>题库</h3>
+          <p class="zt-cap__desc">涵盖技术、财务、HR等各类岗位，500+精选面试题与参考答案</p>
+          <a class="zt-cap__go zt-cap__go--live" href="bank.html">
+            <span>500+ 精选题目<i class="zt-cap__live">可进入</i></span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m9 5 7 7-7 7" />
+            </svg>
+          </a>
+        </li>
+
+        <li class="zt-cap zt-reveal" data-i="2">
+          <span class="zt-cap__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="2.5" width="6" height="11" rx="3" />
+              <path d="M5.5 11.5a6.5 6.5 0 0 0 13 0" />
+              <path d="M12 18v3.5" />
+            </svg>
+          </span>
+          <h3>模拟面试</h3>
+          <p class="zt-cap__desc">基于你的简历生成专属面试题，实时评估并生成改进报告</p>
+          <a class="zt-cap__go zt-cap__go--live" href="interview.html">
+            <span>10题专属面试<i class="zt-cap__live">可进入</i></span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m9 5 7 7-7 7" />
+            </svg>
+          </a>
+        </li>
+
+        <li class="zt-cap zt-reveal" data-i="0">
+          <span class="zt-cap__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3 2 8l10 5 10-5-10-5Z" />
+              <path d="M6 10.5V16c0 1.1 2.7 2.5 6 2.5s6-1.4 6-2.5v-5.5" />
+              <path d="M22 8v6" />
+            </svg>
+          </span>
+          <h3>模拟答辩</h3>
+          <p class="zt-cap__desc">上传论文，AI 答辩委员会围绕研究逐层追问，检验你有没有真懂</p>
+          <a class="zt-cap__go zt-cap__go--live" href="defense.html">
+            <span>上传论文 · 模拟答辩<i class="zt-cap__live">可进入</i></span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m9 5 7 7-7 7" />
+            </svg>
+          </a>
+        </li>
+
+        <li class="zt-cap zt-reveal" data-i="0">
+          <span class="zt-cap__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="8" r="3.2" />
+              <path d="M2.8 19.5a6.2 6.2 0 0 1 12.4 0" />
+              <path d="M16 5.2a3.2 3.2 0 0 1 0 5.6" />
+              <path d="M17.6 13.9a6.2 6.2 0 0 1 3.6 5.6" />
+            </svg>
+          </span>
+          <h3>联机群面</h3>
+          <p class="zt-cap__desc">与其他应聘者同场讨论，AI 面试官按顺序主持并记录表现，结束后给协作评估</p>
+          <a class="zt-cap__go zt-cap__go--live" href="group.html">
+            <span>4-12 人 · AI 替补</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m9 5 7 7-7 7" />
+            </svg>
+          </a>
+        </li>
+
+        <li class="zt-cap zt-reveal" data-i="1">
+          <span class="zt-cap__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 17.8 9 11.3l3.6 3.6L21 6.4" />
+              <path d="M15.6 6.4H21v5.4" />
+            </svg>
+          </span>
+          <h3>成长中心</h3>
+          <p class="zt-cap__desc">每场面试自动归档，画出你的成长曲线，并指出下一场该练什么</p>
+          <a class="zt-cap__go zt-cap__go--live" href="growth.html">
+            <span>看曲线 · 拿建议</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m9 5 7 7-7 7" />
+            </svg>
+          </a>
+        </li>
+
+        <li class="zt-cap zt-reveal" data-i="2">
+          <span class="zt-cap__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3.3" y="4.8" width="17.4" height="15.9" rx="2.6" />
+              <path d="M3.3 9.9h17.4" />
+              <path d="M8 2.6v4.2M16 2.6v4.2" />
+              <path d="M12 12.6v3.3l2.2 1.3" />
+            </svg>
+          </span>
+          <h3>预约线下</h3>
+          <p class="zt-cap__desc">真的面试间，不是视频通话。线上完成地点、面试间与时段的预约，到面试间扫码签到即开始</p>
+          <a class="zt-cap__go zt-cap__go--live" href="booking.html">
+            <span>选时段 · 约面试间</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m9 5 7 7-7 7" />
+            </svg>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══════════════ 态度 ══════════════ -->
+  <section class="zt-belief">
+    <div class="zt-wrap">
+      <figure class="zt-quote zt-reveal">
+        <blockquote>
+          我们不承诺给你 offer。<br />
+          我们承诺你上考场之前，每一题都练过。
+        </blockquote>
+        <figcaption>职面通的产品原则</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ══════════════ CTA ══════════════ -->
+  <section class="zt-cta">
+    <div class="zt-wrap">
+      <div class="zt-cta__panel zt-reveal">
+        <h2>校招在跑，练习现在开始。</h2>
+        <p>注册后第一件事是上传简历，不做别的。</p>
+        <div class="zt-cta__act">
+          <a class="zt-btn zt-btn--solid zt-btn--lg" href="interview.html">开始准备</a>
+          <button type="button" class="zt-btn zt-btn--line zt-btn--lg" data-coming="反馈">说说你的意见</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══════════════ 页脚 ══════════════ -->
+<footer class="zt-foot">
+  <div class="zt-wrap">
+    <div class="zt-foot__top">
+      <div class="zt-foot__brand">
+        <span class="zt-foot__logo" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <rect x=".75" y=".75" width="30.5" height="30.5" rx="9" fill="url(#zt-mark-f)" />
+            <path d="M9 11.5h14M9 16h9M9 20.5h5" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+            <circle cx="23.5" cy="20.5" r="2.6" fill="#fff" />
+            <defs>
+              <linearGradient id="zt-mark-f" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#3E6BFF" /><stop offset="1" stop-color="#0FB5CE" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <p class="zt-foot__slogan">直面挑战，拿下 Offer。</p>
+        <p class="zt-foot__desc">面向大学生的 AI 求职面试练习平台。</p>
+      </div>
+
+      <nav class="zt-foot__cols" aria-label="功能导航">
+        <div class="zt-foot__col">
+          <p class="zt-foot__head">功能</p>
+          <ul>
+            <li><a href="resume.html">简历优化</a></li>
+            <li><a href="bank.html">题库</a></li>
+            <li><a href="interview.html">模拟面试</a></li>
+          </ul>
+        </div>
+        <div class="zt-foot__col">
+          <p class="zt-foot__head">练习</p>
+          <ul>
+            <li><a href="group.html">联机群面</a></li>
+            <li><a href="growth.html">成长中心</a></li>
+            <li><a href="booking.html">预约线下</a></li>
+          </ul>
+        </div>
+        <div class="zt-foot__col">
+          <p class="zt-foot__head">关于</p>
+          <ul>
+            <li><button type="button" data-coming="产品说明">产品说明</button></li>
+            <li><button type="button" data-coming="联系我们">联系我们</button></li>
+            <li><button type="button" data-coming="用户协议">用户协议</button></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="zt-foot__bottom">
+      <p class="zt-foot__copy">© 2026 职面通 Jobont</p>
+      <p class="zt-foot__status"><span class="zt-dot" aria-hidden="true"></span>以上模块正在陆续开放</p>
+    </div>
+  </div>
+</footer>
+
+<div class="zt-toast" id="zt-toast" role="status" aria-live="polite"></div>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

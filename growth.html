@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>成长中心 · 职面通</title>
+<meta name="description" content="职面通「成长中心」：记录每一次模拟面试，自动归档成绩与四维评分，生成成长曲线，并给出下一步的针对性建议。" />
+<meta name="theme-color" content="#F1F5FC" />
+<link rel="icon" href="assets/favicon.png" />
+<!-- 字体：优先国内可达的 Google 中国镜像，失败再回落官方源；
+     全部异步加载，绝不阻塞首屏渲染（国内访问 Google Fonts 会被墙） -->
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" media="print" onload="this.media='all';this.onload=null"
+      href="https://fonts.googleapis.cn/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" />
+<link rel="stylesheet" media="print" onload="this.media='all';this.onload=null"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.cn/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" /></noscript>
+<link rel="stylesheet" href="assets/styles.css" />
+<link rel="stylesheet" href="assets/growth.css" />
+</head>
+<body>
+
+<a class="zt-skip" href="#gw-main">跳到主要内容</a>
+<div class="zt-grid" aria-hidden="true"></div>
+<div class="zt-glow" aria-hidden="true"></div>
+
+<header class="zt-nav" id="zt-nav">
+  <div class="zt-nav__inner">
+    <a class="zt-brand" href="index.html" aria-label="职面通 首页">
+      <span class="zt-brand__mark" aria-hidden="true"><img src="assets/logo.png" width="32" height="32" alt="" decoding="async" /></span>
+      <span class="zt-brand__text"><b>职面通</b><i>Jobont</i></span>
+    </a>
+
+    <nav class="zt-nav__links" aria-label="主导航">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="resume.html">简历优化</a></li>
+        <li><a href="bank.html">题库</a></li>
+        <li><a href="interview.html">模拟面试</a></li>
+        <li><a href="defense.html">模拟答辩</a></li>
+        <li><a href="group.html">联机群面</a></li>
+        <li><a class="is-current" aria-current="page" href="growth.html">成长中心</a></li>
+        <li><a href="booking.html">预约线下</a></li>
+      </ul>
+    </nav>
+
+    <div class="zt-nav__act">
+      <a class="zt-btn zt-btn--ghost" href="index.html">返回首页</a>
+      <a class="zt-btn zt-btn--solid" href="interview.html">去练一题</a>
+    </div>
+
+    <button class="zt-burger" type="button" id="zt-burger" aria-expanded="false" aria-controls="zt-menu" aria-label="打开菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="zt-menu" id="zt-menu" hidden>
+    <ul class="zt-menu__list">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="resume.html">简历优化</a></li>
+        <li><a href="bank.html">题库</a></li>
+        <li><a href="interview.html">模拟面试</a></li>
+        <li><a href="defense.html">模拟答辩</a></li>
+        <li><a href="group.html">联机群面</a></li>
+        <li><a class="is-current" aria-current="page" href="growth.html">成长中心</a></li>
+        <li><a href="booking.html">预约线下</a></li>
+    </ul>
+    <div class="zt-menu__act">
+      <a class="zt-btn zt-btn--ghost" href="index.html">返回首页</a>
+      <a class="zt-btn zt-btn--solid" href="interview.html">去练一题</a>
+    </div>
+  </div>
+</header>
+
+<main class="gw" id="gw-main">
+  <div class="zt-wrap">
+
+    <section class="gw-hero">
+      <p class="gw-eyebrow">个人成长中心</p>
+      <h1 class="gw-hero__h1">记录每一次进步，<br />看见<em>你走过的曲线</em>。</h1>
+      <p class="gw-hero__lead">
+        每做完一次模拟面试，成绩、四维评分和回答里的问题都会自动归档。这里不记流水账，<br />
+        <span class="gw-hero__q">只回答一件事：</span>
+        <span class="gw-hero__q"><b>下一场该怎么练。</b></span>
+      </p>
+    </section>
+
+    <!-- 统计卡 -->
+    <section class="gw-stats" aria-label="成长统计">
+      <div class="gw-stat gw-stat--n">
+        <span class="gw-stat__i" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 15a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z"/></svg>
+        </span>
+        <p class="gw-stat__n" id="gw-s-n">0</p>
+        <p class="gw-stat__l">面试总次数</p>
+        <p class="gw-stat__x" id="gw-s-n-x">还没有记录</p>
+      </div>
+
+      <div class="gw-stat gw-stat--a">
+        <span class="gw-stat__i" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="m8.5 13.5-1.5 7 5-2.5 5 2.5-1.5-7"/></svg>
+        </span>
+        <p class="gw-stat__n" id="gw-s-avg">—</p>
+        <p class="gw-stat__l">平均得分</p>
+        <p class="gw-stat__x" id="gw-s-avg-x">还没有记录</p>
+      </div>
+
+      <div class="gw-stat gw-stat--h">
+        <span class="gw-stat__i" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3.5 2.6 5.4 5.9.8-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9L3.5 9.7l5.9-.8z"/></svg>
+        </span>
+        <p class="gw-stat__n" id="gw-s-best">—</p>
+        <p class="gw-stat__l">最高得分</p>
+        <p class="gw-stat__x" id="gw-s-best-x">还没有记录</p>
+      </div>
+
+      <div class="gw-stat gw-stat--g">
+        <span class="gw-stat__i" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17.5 9 11l4 4 7-7.5"/><path d="M15 7.5h5v5"/></svg>
+        </span>
+        <p class="gw-stat__n" id="gw-s-growth">—</p>
+        <p class="gw-stat__l">成长幅度</p>
+        <p class="gw-stat__x" id="gw-s-growth-x">完成一次面试后开始记录</p>
+      </div>
+    </section>
+
+    <p class="gw-note" id="gw-demo-note" hidden>
+      当前显示的是<b>示例数据</b>，用于预览曲线与建议的效果。做一次真实的模拟面试后，
+      曲线会自动替换为你的记录。<button type="button" id="gw-demo-clear" class="zt-btn zt-btn--line" style="height:30px;padding:0 12px;font-size:12.5px;margin-left:8px">清除示例</button>
+    </p>
+
+    <!-- 成长曲线 -->
+    <section class="gw-card">
+      <div class="gw-card__h">
+        <div>
+          <h2>成长曲线</h2>
+          <p>每一次面试的综合得分，满分 100</p>
+        </div>
+        <div class="gw-card__act">
+          <div class="gw-seg" role="group" aria-label="选择时间范围">
+            <button type="button" data-range="week">本周</button>
+            <button type="button" data-range="month">本月</button>
+            <button type="button" data-range="all" class="is-on">全部</button>
+          </div>
+        </div>
+      </div>
+      <div class="gw-chart">
+        <div class="gw-chart__wrap" id="gw-chart-wrap"></div>
+        <div class="gw-tip" id="gw-tip" role="status" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- 成长建议 -->
+    <section class="gw-card">
+      <div class="gw-card__h">
+        <div>
+          <h2>成长建议</h2>
+          <p>每条建议都写清依据和下一步，不给"多练习"这种废话</p>
+        </div>
+      </div>
+      <div class="gw-adv" id="gw-advice"></div>
+    </section>
+
+    <!-- 练习记录 -->
+    <section class="gw-card">
+      <div class="gw-card__h">
+        <div>
+          <h2>练习记录</h2>
+          <p>条形依次为专业度、表达、逻辑、应变</p>
+        </div>
+      </div>
+      <div class="gw-list" id="gw-list"></div>
+    </section>
+
+    <p class="gw-note">
+      数据只存在<b>你这台设备的浏览器里</b>，不会上传到任何服务器，换设备就看不到了。
+      分数由本地规则引擎按可观测的文字信号折算，<b>不是大模型</b>，也不代表面试官的判断。
+    </p>
+
+  </div>
+</main>
+
+<footer class="zt-foot">
+  <div class="zt-wrap">
+    <div class="zt-foot__top">
+      <div class="zt-foot__brand">
+        <span class="zt-foot__logo" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <rect x=".75" y=".75" width="30.5" height="30.5" rx="9" fill="url(#zt-mark-f)" />
+            <path d="M9 11.5h14M9 16h9M9 20.5h5" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+            <circle cx="23.5" cy="20.5" r="2.6" fill="#fff" />
+            <defs><linearGradient id="zt-mark-f" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#3E6BFF" /><stop offset="1" stop-color="#0FB5CE" /></linearGradient></defs>
+          </svg>
+        </span>
+        <p class="zt-foot__slogan">直面挑战，拿下 Offer。</p>
+        <p class="zt-foot__desc">面向大学生的 AI 求职面试练习平台。</p>
+      </div>
+
+      <nav class="zt-foot__cols" aria-label="功能导航">
+        <div class="zt-foot__col">
+          <p class="zt-foot__head">功能</p>
+          <ul>
+            <li><a href="resume.html">简历优化</a></li>
+            <li><a href="bank.html">题库</a></li>
+            <li><a href="interview.html">模拟面试</a></li>
+          </ul>
+        </div>
+        <div class="zt-foot__col">
+          <p class="zt-foot__head">练习</p>
+          <ul>
+            <li><a href="group.html">联机群面</a></li>
+            <li><a href="growth.html">成长中心</a></li>
+            <li><a href="booking.html">预约线下</a></li>
+          </ul>
+        </div>
+        <div class="zt-foot__col">
+          <p class="zt-foot__head">关于</p>
+          <ul>
+            <li><button type="button" data-coming="产品说明">产品说明</button></li>
+            <li><button type="button" data-coming="联系我们">联系我们</button></li>
+            <li><button type="button" data-coming="用户协议">用户协议</button></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="zt-foot__bottom">
+      <p class="zt-foot__copy">© 2026 职面通 Jobont</p>
+      <p class="zt-foot__status"><span class="zt-dot" aria-hidden="true"></span>以上模块正在陆续开放</p>
+    </div>
+  </div>
+</footer>
+
+<div class="zt-toast" id="zt-toast" role="status" aria-live="polite"></div>
+
+<script src="assets/main.js"></script>
+<script src="assets/llm.js"></script>
+<script src="assets/growth.js"></script>
+</body>
+</html>

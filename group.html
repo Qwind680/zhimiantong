@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>联机群面 · 职面通</title>
+<meta name="description" content="职面通「联机群面」：与其他应聘者同场群面，AI 面试官按顺序主持并记录表现，结束后给出团队协作评估与改进建议。" />
+<meta name="theme-color" content="#F1F5FC" />
+<link rel="icon" href="assets/favicon.png" />
+<!-- 字体：优先国内可达的 Google 中国镜像，失败再回落官方源；
+     全部异步加载，绝不阻塞首屏渲染（国内访问 Google Fonts 会被墙） -->
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" media="print" onload="this.media='all';this.onload=null"
+      href="https://fonts.googleapis.cn/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" />
+<link rel="stylesheet" media="print" onload="this.media='all';this.onload=null"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.cn/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" /></noscript>
+<link rel="stylesheet" href="assets/styles.css" />
+<link rel="stylesheet" href="assets/group.css" />
+</head>
+<body>
+
+<a class="zt-skip" href="#gp-main">跳到主要内容</a>
+<div class="zt-grid" aria-hidden="true"></div>
+<div class="zt-glow" aria-hidden="true"></div>
+
+<header class="zt-nav" id="zt-nav">
+  <div class="zt-nav__inner">
+    <a class="zt-brand" href="index.html" aria-label="职面通 首页">
+      <span class="zt-brand__mark" aria-hidden="true"><img src="assets/logo.png" width="32" height="32" alt="" decoding="async" /></span>
+      <span class="zt-brand__text"><b>职面通</b><i>Jobont</i></span>
+    </a>
+
+    <nav class="zt-nav__links" aria-label="主导航">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="resume.html">简历优化</a></li>
+        <li><a href="bank.html">题库</a></li>
+        <li><a href="interview.html">模拟面试</a></li>
+        <li><a href="defense.html">模拟答辩</a></li>
+        <li><a class="is-current" aria-current="page" href="group.html">联机群面</a></li>
+        <li><a href="growth.html">成长中心</a></li>
+        <li><a href="booking.html">预约线下</a></li>
+      </ul>
+    </nav>
+
+    <div class="zt-nav__act">
+      <a class="zt-btn zt-btn--ghost" href="index.html">返回首页</a>
+      <a class="zt-btn zt-btn--solid" href="interview.html">去练一题</a>
+    </div>
+
+    <button class="zt-burger" type="button" id="zt-burger" aria-expanded="false" aria-controls="zt-menu" aria-label="打开菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="zt-menu" id="zt-menu" hidden>
+    <ul class="zt-menu__list">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="resume.html">简历优化</a></li>
+        <li><a href="bank.html">题库</a></li>
+        <li><a href="interview.html">模拟面试</a></li>
+        <li><a href="defense.html">模拟答辩</a></li>
+        <li><a class="is-current" aria-current="page" href="group.html">联机群面</a></li>
+        <li><a href="growth.html">成长中心</a></li>
+        <li><a href="booking.html">预约线下</a></li>
+    </ul>
+    <div class="zt-menu__act">
+      <a class="zt-btn zt-btn--ghost" href="index.html">返回首页</a>
+      <a class="zt-btn zt-btn--solid" href="interview.html">去练一题</a>
+    </div>
+  </div>
+</header>
+
+<main class="gp" id="gp-main">
+  <div class="zt-wrap">
+
+    <!-- ══════════════ 设置 ══════════════ -->
+    <div id="gp-setup">
+      <section class="gp-hero">
+        <span class="gp-hero__i" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5.5a3 3 0 0 1 0 5.5M17.5 14.5A5 5 0 0 1 21 19.5"/></svg>
+        </span>
+        <h1 class="gp-hero__h1">联机群面练习</h1>
+        <p class="gp-hero__lead">和其他应聘者同场讨论，AI 面试官按顺序主持并记录每个人的表现，结束后给出团队协作评估。</p>
+      </section>
+
+      <section class="gp-feats">
+        <div class="gp-feat">
+          <span class="gp-feat__i" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5.5a3 3 0 0 1 0 5.5M17.5 14.5A5 5 0 0 1 21 19.5"/></svg>
+          </span>
+          <h3>多方同时参与</h3>
+          <p>同一浏览器再开一个标签页就是第二位参与者，发言实时互通</p>
+        </div>
+        <div class="gp-feat gp-feat--b">
+          <span class="gp-feat__i" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="13" height="12" rx="2.5"/><path d="m15.5 10.5 6-3.2v9.4l-6-3.2z"/></svg>
+          </span>
+          <h3>AI 面试官主持</h3>
+          <p>按顺序点名、控制发言节奏、每轮小结，空位由 AI 替补补齐</p>
+        </div>
+        <div class="gp-feat gp-feat--g">
+          <span class="gp-feat__i" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 15a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z"/></svg>
+          </span>
+          <h3>实时反馈</h3>
+          <p>发言分布实时可见，结束后得到团队协作评估与改进建议</p>
+        </div>
+      </section>
+
+      <!-- 难度 -->
+      <section class="gp-card">
+        <h2 class="gp-card__h"><i>1</i>选择难度级别<span id="gp-qhint"></span></h2>
+        <div class="gp-levels">
+          <button type="button" class="gp-level gp-level--1" data-level="easy">
+            <span class="gp-level__n">入门级</span>
+            <p class="gp-level__d">适合初次参加群面的同学，题目围绕自我介绍与常见经历</p>
+            <span class="gp-level__c">参与人数：<b>4 - 6</b> 人</span>
+            <span class="gp-level__bar"><i style="width:34%"></i></span>
+          </button>
+          <button type="button" class="gp-level gp-level--2 is-on" data-level="std">
+            <span class="gp-level__n">标准级</span>
+            <p class="gp-level__d">标准群面难度，常见企业面试，冲突判断与限时方案</p>
+            <span class="gp-level__c">参与人数：<b>6 - 8</b> 人</span>
+            <span class="gp-level__bar"><i style="width:66%"></i></span>
+          </button>
+          <button type="button" class="gp-level gp-level--3" data-level="hard">
+            <span class="gp-level__n">挑战级</span>
+            <p class="gp-level__d">高压群面，知名企业真题，资源冲突与立场碰撞</p>
+            <span class="gp-level__c">参与人数：<b>8 - 12</b> 人</span>
+            <span class="gp-level__bar"><i style="width:92%"></i></span>
+          </button>
+        </div>
+      </section>
+
+      <!-- 加入方式 -->
+      <section class="gp-card">
+        <h2 class="gp-card__h"><i>2</i>怎么进场<span id="gp-people-hint"></span></h2>
+
+        <div class="gp-ways">
+          <div class="gp-way">
+            <span class="gp-way__i" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M19 8v6M16 11h6"/></svg>
+            </span>
+            <h3>邀请同伴</h3>
+            <p>生成房间码和邀请链接，同伴打开就能进。人数不足时由 AI 智能替补补齐座位。</p>
+            <div class="gp-way__form">
+              <input class="gp-input" id="gp-nick" type="text" placeholder="你的昵称（对方看到的名字）" maxlength="12" />
+              <input class="gp-input gp-code" id="gp-code-input" type="text" placeholder="房间码（同伴给你的）" maxlength="6" />
+            </div>
+            <div class="gp-way__act">
+              <button class="zt-btn zt-btn--solid" type="button" id="gp-create">开一个房间</button>
+              <button class="zt-btn zt-btn--line" type="button" id="gp-join">加入房间</button>
+              <button class="zt-btn zt-btn--line" type="button" id="gp-copy" hidden>复制邀请链接</button>
+            </div>
+            <p id="gp-created" hidden style="margin-top:12px;font-size:12.5px;color:var(--ink-3);line-height:1.75">
+              房间已创建。把上面的<b>房间码</b>或邀请链接发给同伴；也可以在本浏览器新开一个标签页粘贴链接，直接体验联机。
+            </p>
+          </div>
+
+          <div class="gp-way gp-way--b">
+            <span class="gp-way__i" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+            </span>
+            <h3>匹配对手</h3>
+            <p>系统在本机寻找同样在等待的参与者。找不到就直接开局，空位由 AI 替补顶上，流程完整不打折。</p>
+            <div class="gp-way__form">
+              <input class="gp-input" id="gp-nick2" type="text" placeholder="你的昵称" maxlength="12" />
+            </div>
+            <div class="gp-way__act">
+              <button class="zt-btn zt-btn--solid" type="button" id="gp-match">加入匹配队列</button>
+            </div>
+            <p id="gp-match-t" style="margin-top:12px;font-size:12.5px;color:var(--ink-3);line-height:1.75">
+              也可以用对方的房间码直接进：在左边「邀请同伴」的框里输入房间码，点开一个房间即可。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <p class="gp-note">
+        <b>联机是真的，但只在同一台设备上。</b>本页用浏览器的 BroadcastChannel 做实时通信，
+        所以在<b>本浏览器新开一个标签页</b>打开邀请链接，就是两位真实参与者，能互相看到发言。
+        不同设备之间需要后端来中转，<code>server/</code> 里已有代理骨架，接上即可。
+        分数与评估由本地规则引擎给出，<b>不是大模型</b>。
+      </p>
+    </div>
+
+    <!-- ══════════════ 房间 ══════════════ -->
+    <div id="gp-room" class="gp-room">
+      <div class="gp-stage">
+        <div class="gp-stage__bar">
+          <span class="gp-stage__code">房间码 <b id="gp-code-b">—</b></span>
+          <span class="gp-stage__meta">
+            <span id="gp-people">—</span>
+            <span id="gp-phase">等待开始</span>
+          </span>
+          <span class="gp-stage__act">
+            <button type="button" class="gp-sbtn" id="gp-copy2">复制邀请链接</button>
+            <button type="button" class="gp-sbtn gp-sbtn--go" id="gp-start">开始群面</button>
+            <button type="button" class="gp-sbtn gp-sbtn--end" id="gp-end">结束并出报告</button>
+          </span>
+        </div>
+
+        <div class="gp-stage__body">
+          <div>
+            <div class="gp-talk" id="gp-talk"></div>
+
+            <div class="gp-inputbar">
+              <p class="gp-inputbar__t" id="gp-turn"><span>等待开始</span></p>
+              <div class="gp-inputrow">
+                <textarea class="gp-ta" id="gp-ta" rows="1" placeholder="轮到你会在这里亮起。按 STAR 说：情况、任务、动作、结果。" disabled></textarea>
+                <button type="button" class="gp-send" id="gp-send" disabled>发送</button>
+              </div>
+            </div>
+          </div>
+
+          <aside class="gp-side">
+            <p class="gp-side__h">座位 <span id="gp-count">—</span></p>
+            <div class="gp-seats" id="gp-seats"></div>
+
+            <div class="gp-side__block">
+              <p class="gp-side__h">实时反馈</p>
+              <div class="gp-meter">
+                <p class="gp-meter__t">我的发言<b id="gp-mine-c">0 次</b></p>
+                <span class="gp-meter__bar gp-meter__bar--blue"><i style="width:0%"></i></span>
+              </div>
+              <div class="gp-meter">
+                <p class="gp-meter__t">我的字数<b id="gp-mine-r">0 字</b></p>
+                <span class="gp-meter__bar gp-meter__bar--amber"><i style="width:0%"></i></span>
+              </div>
+              <div class="gp-dist" id="gp-dist"></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════ 报告 ══════════════ -->
+    <div id="gp-report" class="gp-report" hidden>
+      <div class="gp-score">
+        <div class="gp-score__n">
+          <b id="gp-score-n">0</b>
+          <span id="gp-score-l">团队协作分</span>
+          <em id="gp-score-e">—</em>
+        </div>
+        <div class="gp-score__rows" id="gp-score-rows"></div>
+      </div>
+
+      <section class="gp-card">
+        <h2 class="gp-card__h"><i>!</i>改进建议<span>每条都写清依据和下一步</span></h2>
+        <div class="gp-acts" id="gp-acts"></div>
+        <div class="gp-way__act" style="margin-top:20px">
+          <a class="zt-btn zt-btn--solid" href="growth.html">去成长中心看曲线</a>
+          <button class="zt-btn zt-btn--line" type="button" id="gp-again">再开一场</button>
+        </div>
+      </section>
+    </div>
+
+  </div>
+</main>
+
+<footer class="zt-foot">
+  <div class="zt-wrap">
+    <div class="zt-foot__top">
+      <div class="zt-foot__brand">
+        <span class="zt-foot__logo" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <rect x=".75" y=".75" width="30.5" height="30.5" rx="9" fill="url(#zt-mark-f)" />
+            <path d="M9 11.5h14M9 16h9M9 20.5h5" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+            <circle cx="23.5" cy="20.5" r="2.6" fill="#fff" />
+            <defs><linearGradient id="zt-mark-f" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#3E6BFF" /><stop offset="1" stop-color="#0FB5CE" /></linearGradient></defs>
+          </svg>
+        </span>
+        <p class="zt-foot__slogan">直面挑战，拿下 Offer。</p>
+        <p class="zt-foot__desc">面向大学生的 AI 求职面试练习平台。</p>
+      </div>
+
+      <nav class="zt-foot__cols" aria-label="功能导航">
+        <div class="zt-foot__col">
+          <p class="zt-foot__head">功能</p>
+          <ul>
+            <li><a href="resume.html">简历优化</a></li>
+            <li><a href="bank.html">题库</a></li>
+            <li><a href="interview.html">模拟面试</a></li>
+          </ul>
+        </div>
+        <div class="zt-foot__col">
+          <p class="zt-foot__head">练习</p>
+          <ul>
+            <li><a href="group.html">联机群面</a></li>
+            <li><a href="growth.html">成长中心</a></li>
+            <li><a href="booking.html">预约线下</a></li>
+          </ul>
+        </div>
+        <div class="zt-foot__col">
+          <p class="zt-foot__head">关于</p>
+          <ul>
+            <li><button type="button" data-coming="产品说明">产品说明</button></li>
+            <li><button type="button" data-coming="联系我们">联系我们</button></li>
+            <li><button type="button" data-coming="用户协议">用户协议</button></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="zt-foot__bottom">
+      <p class="zt-foot__copy">© 2026 职面通 Jobont</p>
+      <p class="zt-foot__status"><span class="zt-dot" aria-hidden="true"></span>以上模块正在陆续开放</p>
+    </div>
+  </div>
+</footer>
+
+<div class="zt-toast" id="zt-toast" role="status" aria-live="polite"></div>
+
+<script src="assets/main.js"></script>
+<script src="assets/group.js"></script>
+</body>
+</html>

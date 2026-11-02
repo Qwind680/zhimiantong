@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>题库 · 职面通</title>
+<meta name="description" content="职面通题库：按技术、产品、运营、市场、销售、人力、财务、管培八类职位分类的笔试题目，含参考答案与解析，支持收藏。" />
+<meta name="theme-color" content="#F1F5FC" />
+<link rel="icon" href="assets/favicon.png" />
+<!-- 字体：优先国内可达的 Google 中国镜像，失败再回落官方源；
+     全部异步加载，绝不阻塞首屏渲染（国内访问 Google Fonts 会被墙） -->
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" media="print" onload="this.media='all';this.onload=null"
+      href="https://fonts.googleapis.cn/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" />
+<link rel="stylesheet" media="print" onload="this.media='all';this.onload=null"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.cn/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" /></noscript>
+<link rel="stylesheet" href="assets/styles.css" />
+<link rel="stylesheet" href="assets/bank.css" />
+</head>
+<body>
+
+<a class="zt-skip" href="#bk-main">跳到主要内容</a>
+<div class="zt-grid" aria-hidden="true"></div>
+<div class="zt-glow" aria-hidden="true"></div>
+
+<header class="zt-nav" id="zt-nav">
+  <div class="zt-nav__inner">
+    <a class="zt-brand" href="index.html" aria-label="职面通 首页">
+      <span class="zt-brand__mark" aria-hidden="true"><img src="assets/logo.png" width="32" height="32" alt="" decoding="async" /></span>
+      <span class="zt-brand__text"><b>职面通</b><i>Jobont</i></span>
+    </a>
+
+    <nav class="zt-nav__links" aria-label="主导航">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="resume.html">简历优化</a></li>
+        <li><a class="is-current" aria-current="page" href="bank.html">题库</a></li>
+        <li><a href="interview.html">模拟面试</a></li>
+        <li><a href="defense.html">模拟答辩</a></li>
+        <li><a href="group.html">联机群面</a></li>
+        <li><a href="growth.html">成长中心</a></li>
+        <li><a href="booking.html">预约线下</a></li>
+      </ul>
+    </nav>
+
+    <div class="zt-nav__act">
+      <a class="zt-btn zt-btn--ghost" href="index.html">返回首页</a>
+      <a class="zt-btn zt-btn--solid" href="#bk-list">开始刷题</a>
+    </div>
+
+    <button class="zt-burger" type="button" id="zt-burger" aria-expanded="false" aria-controls="zt-menu" aria-label="打开菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="zt-menu" id="zt-menu" hidden>
+    <ul class="zt-menu__list">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="resume.html">简历优化</a></li>
+        <li><a class="is-current" aria-current="page" href="bank.html">题库</a></li>
+        <li><a href="interview.html">模拟面试</a></li>
+        <li><a href="defense.html">模拟答辩</a></li>
+        <li><a href="group.html">联机群面</a></li>
+        <li><a href="growth.html">成长中心</a></li>
+        <li><a href="booking.html">预约线下</a></li>
+      </ul>
+    <div class="zt-menu__act">
+      <a class="zt-btn zt-btn--ghost" href="index.html">返回首页</a>
+      <a class="zt-btn zt-btn--solid" href="#bk-list">开始刷题</a>
+    </div>
+  </div>
+</header>
+
+<div class="bk">
+  <!-- ═══════ 左侧导航 ═══════ -->
+  <aside class="bk-side" id="bk-side" aria-label="题库分类">
+    <button class="bk-side__close" type="button" id="bk-close" aria-label="关闭分类">×</button>
+    <div class="bk-side__inner">
+      <p class="bk-side__cap">分类</p>
+      <nav id="bk-cats" aria-label="按职位类型分类"></nav>
+
+      <p class="bk-side__cap bk-side__cap--fav">收藏</p>
+      <nav id="bk-fav" aria-label="我收藏的题目"></nav>
+    </div>
+  </aside>
+
+  <!-- ═══════ 右侧内容 ═══════ -->
+  <main class="bk-main" id="bk-main">
+    <div class="bk-main__inner">
+
+      <header class="bk-head">
+        <p class="zt-kicker">题库</p>
+        <h1 class="bk-head__title" id="bk-title">全部题目</h1>
+        <p class="bk-head__sub" id="bk-sub">按职位类型分类，点开题目看答案。</p>
+
+        <div class="bk-tools">
+          <div class="bk-search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/>
+            </svg>
+            <label class="zt-skip" for="bk-q">搜索题目</label>
+            <input id="bk-q" type="search" placeholder="搜题干关键词，如「转化率」「索引」" autocomplete="off" />
+            <button class="bk-search__clear" type="button" id="bk-clear" aria-label="清空搜索" hidden>&times;</button>
+          </div>
+          <div class="bk-filters" role="group" aria-label="按题型筛选">
+            <button type="button" class="bk-chip is-on" data-ftype="all">全部</button>
+            <button type="button" class="bk-chip" data-ftype="single">单选</button>
+            <button type="button" class="bk-chip" data-ftype="multi">多选</button>
+            <button type="button" class="bk-chip" data-ftype="judge">判断</button>
+            <button type="button" class="bk-chip" data-ftype="short">简答</button>
+          </div>
+        </div>
+      </header>
+
+      <p class="bk-count" id="bk-count" aria-live="polite"></p>
+
+      <ol class="bk-list" id="bk-list"></ol>
+
+      <p class="bk-empty" id="bk-empty" hidden>
+        <span class="bk-empty__t">这里还没有题目</span>
+        <span class="bk-empty__s">换个分类或清空搜索条件试试。</span>
+      </p>
+
+      <p class="bk-note">
+        答案与解析藏在题目里。答错再看，比先看答案记得牢。
+      </p>
+    </div>
+  </main>
+</div>
+
+<button class="bk-sidebtn" type="button" id="bk-sidebtn" aria-expanded="false" aria-controls="bk-side">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+    <path d="M4 6h16M4 12h16M4 18h10"/>
+  </svg>
+  分类
+</button>
+<div class="bk-scrim" id="bk-scrim" hidden></div>
+
+<script src="assets/main.js"></script>
+<script src="assets/bank.js"></script>
+</body>
+</html>

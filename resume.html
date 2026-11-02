@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>简历优化 · 职面通</title>
+<meta name="description" content="职面通简历优化：上传岗位 JD 与个人简历，五维评价硬性匹配、成果量化、语言专业度、篇幅合理性与针对性，并给出逐句改前改后对比。" />
+<meta name="theme-color" content="#F1F5FC" />
+<link rel="icon" href="assets/favicon.png" />
+<!-- 字体：优先国内可达的 Google 中国镜像，失败再回落官方源；
+     全部异步加载，绝不阻塞首屏渲染（国内访问 Google Fonts 会被墙） -->
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" media="print" onload="this.media='all';this.onload=null"
+      href="https://fonts.googleapis.cn/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" />
+<link rel="stylesheet" media="print" onload="this.media='all';this.onload=null"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.cn/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" /></noscript>
+<link rel="stylesheet" href="assets/styles.css" />
+<link rel="stylesheet" href="assets/optimize.css" />
+</head>
+<body>
+
+<a class="zt-skip" href="#op-main">跳到主要内容</a>
+<div class="zt-grid" aria-hidden="true"></div>
+<div class="zt-glow" aria-hidden="true"></div>
+
+<header class="zt-nav" id="zt-nav">
+  <div class="zt-nav__inner">
+    <a class="zt-brand" href="index.html" aria-label="职面通 首页">
+      <span class="zt-brand__mark" aria-hidden="true"><img src="assets/logo.png" width="32" height="32" alt="" decoding="async" /></span>
+      <span class="zt-brand__text"><b>职面通</b><i>Jobont</i></span>
+    </a>
+
+    <nav class="zt-nav__links" aria-label="主导航">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a class="is-current" href="resume.html" aria-current="page">简历优化</a></li>
+        <li><a href="bank.html">题库</a></li>
+        <li><a href="interview.html">模拟面试</a></li>
+        <li><a href="defense.html">模拟答辩</a></li>
+        <li><a href="group.html">联机群面</a></li>
+        <li><a href="growth.html">成长中心</a></li>
+        <li><a href="booking.html">预约线下</a></li>
+      </ul>
+    </nav>
+
+    <div class="zt-nav__act">
+      <a class="zt-btn zt-btn--ghost" href="index.html">返回首页</a>
+      <a class="zt-btn zt-btn--solid" href="#op-input">开始优化</a>
+    </div>
+
+    <button class="zt-burger" type="button" id="zt-burger" aria-expanded="false" aria-controls="zt-menu" aria-label="打开菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="zt-menu" id="zt-menu" hidden>
+    <ul class="zt-menu__list">
+      <li><a href="index.html">首页</a></li>
+      <li><a class="is-current" href="resume.html">简历优化</a></li>
+      <li><a href="bank.html">题库</a></li>
+      <li><a href="interview.html">模拟面试</a></li>
+      <li><a href="defense.html">模拟答辩</a></li>
+      <li><a href="group.html">联机群面</a></li>
+      <li><a href="growth.html">成长中心</a></li>
+      <li><a href="booking.html">预约线下</a></li>
+    </ul>
+    <div class="zt-menu__act">
+      <a class="zt-btn zt-btn--ghost" href="index.html">返回首页</a>
+      <a class="zt-btn zt-btn--solid" href="#op-input">开始优化</a>
+    </div>
+  </div>
+</header>
+
+<main class="op" id="op-main">
+
+  <!-- ══════════ 输入 ══════════ -->
+  <section class="op-step is-on" data-step="1" id="op-input">
+    <div class="op-wrap">
+      <header class="op-head">
+        <p class="zt-kicker">简历优化</p>
+        <h1 class="op-title">把简历，对着这个岗位改一遍。</h1>
+      </header>
+
+      <div class="op-inputs">
+        <!-- JD -->
+        <section class="op-box" aria-labelledby="op-jd-h">
+          <div class="op-box__head">
+            <h2 class="op-box__t" id="op-jd-h"><span class="op-box__n">1</span>岗位 JD</h2>
+            <button class="op-box__file" type="button" id="op-jd-file-btn">上传文件</button>
+            <input type="file" id="op-jd-file" accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png,.gif,.webp,.bmp" hidden />
+          </div>
+          <textarea class="op-textarea" id="op-jd" rows="12"
+            placeholder="把 JD 粘贴到这里。&#10;&#10;比如：&#10;产品经理（校招）&#10;学历：本科及以上&#10;专业：计算机、信息管理等相关专业&#10;3年以上产品工作经验，有电商行业背景&#10;熟悉数据分析，能独立完成 A/B 测试&#10;岗位职责：&#10;1、负责电商中台产品需求分析与方案设计&#10;2、搭建指标体系，驱动转化提升&#10;3、协同开发团队推动版本落地"></textarea>
+          <p class="op-box__tip" id="op-jd-tip">支持粘贴或上传 PDF / Word / txt。会从里面提取学历、专业、年限、行业、证书和技能要求。</p>
+        </section>
+
+        <!-- 简历 -->
+        <section class="op-box" aria-labelledby="op-rs-h">
+          <div class="op-box__head">
+            <h2 class="op-box__t" id="op-rs-h"><span class="op-box__n">2</span>个人简历</h2>
+            <button class="op-box__file" type="button" id="op-rs-file-btn">上传文件</button>
+            <input type="file" id="op-rs-file" accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png,.gif,.webp,.bmp" hidden />
+          </div>
+          <textarea class="op-textarea" id="op-rs" rows="12"
+            placeholder="把简历粘贴到这里，或点右上角上传 PDF / Word。&#10;&#10;段落写清楚一点，识别会准很多：&#10;姓名 · 电话 · 邮箱&#10;个人评价&#10;…&#10;实习经历&#10;公司 / 岗位 / 时间&#10;…&#10;项目经历&#10;…&#10;教育背景&#10;…&#10;专业技能&#10;…"></textarea>
+          <p class="op-box__tip" id="op-rs-tip">PDF / Word / txt / 图片，或直接粘贴。图片与扫描件会发给后端 AI 识别，其余在你浏览器里解析。</p>
+        </section>
+      </div>
+
+      <div class="op-go">
+        <button class="zt-btn zt-btn--solid zt-btn--lg" type="button" id="op-run">开始优化</button>
+        <p class="op-go__tip" id="op-err" hidden></p>
+      </div>
+
+      <p class="op-note" id="op-engine-note">
+        本页由浏览器内的规则引擎驱动（关键词与结构信号判定，非大模型）。
+        每条结论都标了依据，可以逐条复核；【】里的数字需要你自己填真实值，别编。
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════ 报告 ══════════ -->
+  <section class="op-step" data-step="2" id="op-report">
+    <div class="op-wrap">
+
+      <header class="rp-top">
+        <div class="rp-top__l">
+          <p class="zt-kicker">优化报告</p>
+          <h1 class="rp-top__t" id="rp-role">—</h1>
+          <p class="rp-top__s" id="rp-sub">—</p>
+        </div>
+        <div class="rp-top__r">
+          <div class="rp-score">
+            <b id="rp-total">0</b><i>/100</i>
+          </div>
+          <p class="rp-score__l" id="rp-total-l">匹配度</p>
+        </div>
+      </header>
+
+      <!-- ───── 板块一：评价 ───── -->
+      <section class="rp-sec">
+        <div class="rp-sec__head">
+          <span class="rp-sec__n">一</span>
+          <div>
+            <h2 class="rp-sec__t">简历评价</h2>
+            <p class="rp-sec__d">五个维度，逐条给出依据和扣分点。</p>
+          </div>
+        </div>
+
+        <ul class="rp-dims" id="rp-dims"></ul>
+
+        <div class="rp-advice">
+          <div class="rp-advice__head">
+            <h3 class="rp-advice__t">建议</h3>
+            <p class="rp-advice__d">每条都对应上面某个维度的扣分点，按顺序改就行。</p>
+          </div>
+          <ol class="rp-advice__list" id="rp-advice"></ol>
+        </div>
+      </section>
+
+      <!-- ───── 板块二：改前改后 ───── -->
+      <section class="rp-sec">
+        <div class="rp-sec__head">
+          <span class="rp-sec__n">二</span>
+          <div>
+            <h2 class="rp-sec__t">改前改后</h2>
+            <p class="rp-sec__d">左边是改完的版本，右边是你原来的写法。</p>
+          </div>
+        </div>
+        <div class="rp-diff" id="rp-diff"></div>
+      </section>
+
+      <div class="rp-cta">
+        <button class="zt-btn zt-btn--solid zt-btn--lg" type="button" id="op-again">再改一版</button>
+        <a class="zt-btn zt-btn--line zt-btn--lg" href="interview.html">去模拟面试</a>
+      </div>
+
+      <p class="op-note" id="op-engine-note-2">
+        改写同样来自规则引擎，模板化痕迹重是它的短板。
+        它能帮你发现「哪里没数字」「哪里用了弱动词」，但具体数字和真实细节得你补。
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<div class="zt-toast" id="zt-toast" role="status" aria-live="polite"></div>
+
+<script src="assets/main.js"></script>
+<script src="assets/llm.js"></script>
+<script src="assets/resume.js"></script>
+<script src="assets/optimize.js"></script>
+</body>
+</html>
